@@ -1,10 +1,12 @@
-/* CSS Variables for Button */
+/* CSS Variables for Button - Rivaro Luxury Brand */
 :root {
-  --button-transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-  --button-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --button-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --button-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  --button-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --button-transition: all 0.2s ease;
+  --button-shadow-none: none;
+  --button-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.08);
+  --rivaro-navy: #243b53;
+  --rivaro-charcoal: #3b3b3b;
+  --rivaro-white: #ffffff;
+  --rivaro-gray: #e1e1e1;
 }
 
 .button {
@@ -12,7 +14,7 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-weight: 500;
   line-height: 1.5;
   text-align: center;
@@ -27,11 +29,13 @@
   overflow: hidden;
   isolation: isolate;
   outline: none;
+  letter-spacing: 0.025em;
 }
 
 .button:focus-visible {
-  outline: none;
-  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.3);
+  outline: 1px solid var(--rivaro-navy);
+  outline-offset: 2px;
+  box-shadow: none;
   z-index: 1;
 }
 
@@ -74,107 +78,112 @@
   margin-left: -0.125rem;
 }
 
-/* Variants */
+/* Variants - Rivaro Luxury */
 .button--primary {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  border-color: transparent;
-  box-shadow: var(--button-shadow-sm);
+  background: var(--rivaro-navy);
+  color: var(--rivaro-white);
+  border-color: var(--rivaro-navy);
+  box-shadow: var(--button-shadow-none);
 }
 
 .button--primary:hover:not(:disabled) {
-  background: linear-gradient(135deg, #5568d3 0%, #6a4190 100%);
-  box-shadow: var(--button-shadow-lg);
+  background: #102a43;
+  border-color: #102a43;
+  box-shadow: var(--button-shadow-sm);
   transform: translateY(-1px);
 }
 
 .button--secondary {
-  background-color: #f3f4f6;
-  color: #1f2937;
-  border-color: #e5e7eb;
-  box-shadow: var(--button-shadow-sm);
+  background-color: transparent;
+  color: var(--rivaro-charcoal);
+  border-color: var(--rivaro-charcoal);
+  box-shadow: var(--button-shadow-none);
 }
 
 .button--secondary:hover:not(:disabled) {
-  background-color: #e5e7eb;
-  border-color: #d1d5db;
-  box-shadow: var(--button-shadow-md);
+  background-color: var(--rivaro-charcoal);
+  color: var(--rivaro-white);
+  border-color: var(--rivaro-charcoal);
+  box-shadow: var(--button-shadow-none);
   transform: translateY(-1px);
 }
 
 .button--outline {
   background-color: transparent;
-  color: #667eea;
-  border-color: #667eea;
+  color: var(--rivaro-navy);
+  border-color: var(--rivaro-navy);
   box-shadow: none;
 }
 
 .button--outline:hover:not(:disabled) {
-  background-color: #f5f3ff;
-  border-color: #5568d3;
-  box-shadow: var(--button-shadow-sm);
+  background-color: var(--rivaro-navy);
+  color: var(--rivaro-white);
+  border-color: var(--rivaro-navy);
+  box-shadow: none;
 }
 
 .button--link {
   background-color: transparent;
-  color: #667eea;
+  color: var(--rivaro-charcoal);
   border-color: transparent;
   text-decoration: none;
   box-shadow: none;
 }
 
 .button--link:hover:not(:disabled) {
-  color: #5568d3;
+  color: var(--rivaro-navy);
   text-decoration: underline;
   background-color: transparent;
 }
 
 .button--danger {
-  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  background: #dc2626;
   color: white;
-  border-color: transparent;
-  box-shadow: var(--button-shadow-sm);
+  border-color: #dc2626;
+  box-shadow: var(--button-shadow-none);
 }
 
 .button--danger:hover:not(:disabled) {
-  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
-  box-shadow: var(--button-shadow-lg);
+  background: #b91c1c;
+  border-color: #b91c1c;
+  box-shadow: var(--button-shadow-sm);
   transform: translateY(-1px);
 }
 
 .button--success {
-  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  background: #059669;
   color: white;
-  border-color: transparent;
-  box-shadow: var(--button-shadow-sm);
+  border-color: #059669;
+  box-shadow: var(--button-shadow-none);
 }
 
 .button--success:hover:not(:disabled) {
-  background: linear-gradient(135deg, #059669 0%, #047857 100%);
-  box-shadow: var(--button-shadow-lg);
+  background: #047857;
+  border-color: #047857;
+  box-shadow: var(--button-shadow-sm);
   transform: translateY(-1px);
 }
 
-/* Sizes */
+/* Sizes - Minimal border radius for sharp, tailored look */
 .button--sm {
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1.25rem;
   font-size: 0.875rem;
-  border-radius: 0.5rem;
+  border-radius: 2px;
   min-height: 2rem;
 }
 
 .button--md {
-  padding: 0.625rem 1.25rem;
+  padding: 0.75rem 1.75rem;
   font-size: 0.9375rem;
-  border-radius: 0.625rem;
-  min-height: 2.5rem;
+  border-radius: 2px;
+  min-height: 2.75rem;
 }
 
 .button--lg {
-  padding: 0.875rem 1.75rem;
+  padding: 1rem 2.25rem;
   font-size: 1rem;
-  border-radius: 0.75rem;
-  min-height: 3rem;
+  border-radius: 2px;
+  min-height: 3.25rem;
 }
 
 /* Full width */

@@ -1,0 +1,178 @@
+/* Footer - Rivaro Luxury Brand */
+
+.footer {
+  width: 100%;
+  background-color: #243b53;
+  color: #ffffff;
+  padding: 6rem 0 2rem;
+  margin-top: 4rem;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  width: 100%;
+}
+
+.grid {
+  margin-bottom: 4rem;
+}
+
+/* Brand Column */
+.brandColumn {
+  direction: ltr;
+  text-align: left;
+}
+
+.logo {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  color: #ffffff;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.tagline {
+  font-family: 'Assistant', 'Rubik', 'Heebo', sans-serif;
+  color: rgba(255, 255, 255, 0.8);
+  direction: rtl;
+  text-align: right;
+  max-width: 300px;
+}
+
+/* Contact Column */
+.contactColumn {
+  direction: rtl;
+}
+
+.columnTitle {
+  font-family: 'Assistant', 'Rubik', 'Heebo', sans-serif;
+  color: #ffffff;
+  direction: rtl;
+  text-align: right;
+  margin-bottom: 0.5rem;
+}
+
+.contactLink,
+.socialLink {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.3s ease;
+  direction: rtl;
+  width: fit-content;
+}
+
+.contactLink:hover,
+.socialLink:hover {
+  opacity: 0.7;
+}
+
+.contactText {
+  font-family: 'Assistant', 'Rubik', 'Heebo', sans-serif;
+  color: rgba(255, 255, 255, 0.9);
+  direction: rtl;
+  text-align: right;
+}
+
+.icon {
+  font-size: 1.25rem;
+  opacity: 0.9;
+}
+
+/* Socials Column */
+.socialsColumn {
+  direction: rtl;
+}
+
+.backToTop {
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+  width: fit-content;
+}
+
+.backToTop:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.backToTopText {
+  font-family: 'Assistant', 'Rubik', 'Heebo', sans-serif;
+  color: #ffffff;
+  direction: rtl;
+}
+
+/* Copyright */
+.copyright {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 2rem;
+  margin-top: 2rem;
+}
+
+.copyrightText {
+  font-family: 'Inter', sans-serif;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+}
+
+/* Responsive - Tablet */
+@media (max-width: 1024px) {
+  .footer {
+    padding: 4rem 0 2rem;
+  }
+
+  .grid {
+    margin-bottom: 3rem;
+  }
+}
+
+/* Responsive - Mobile */
+@media (max-width: 768px) {
+  .footer {
+    padding: 3rem 0 2rem;
+    margin-top: 3rem;
+  }
+
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  .grid {
+    margin-bottom: 2rem;
+  }
+
+  .brandColumn,
+  .contactColumn,
+  .socialsColumn {
+    text-align: center;
+    align-items: center;
+  }
+
+  .tagline {
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .columnTitle {
+    text-align: center;
+  }
+
+  .contactLink,
+  .socialLink {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .backToTop {
+    width: 100%;
+  }
+}

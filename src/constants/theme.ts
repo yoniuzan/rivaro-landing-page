@@ -26,35 +26,35 @@ export const mediaQueries = {
   xxl: `@media (min-width: ${breakpoints.xxl}px)`,
 } as const;
 
-// Color palette
+// Color palette - Rivaro Luxury Brand
 export const colors = {
-  // Primary colors
-  primary: {
-    50: '#e3f2fd',
-    100: '#bbdefb',
-    200: '#90caf9',
-    300: '#64b5f6',
-    400: '#42a5f5',
-    500: '#2196f3',
-    600: '#1e88e5',
-    700: '#1976d2',
-    800: '#1565c0',
-    900: '#0d47a1',
+  // Midnight Navy - Primary brand color
+  navy: {
+    50: '#f0f4f8',
+    100: '#d9e2ec',
+    200: '#bcccdc',
+    300: '#9fb3c8',
+    400: '#829ab1',
+    500: '#627d98',
+    600: '#486581',
+    700: '#334e68',
+    800: '#243b53',  // Deep midnight navy
+    900: '#102a43',
   },
-  // Secondary colors
-  secondary: {
-    50: '#f3e5f5',
-    100: '#e1bee7',
-    200: '#ce93d8',
-    300: '#ba68c8',
-    400: '#ab47bc',
-    500: '#9c27b0',
-    600: '#8e24aa',
-    700: '#7b1fa2',
-    800: '#6a1b9a',
-    900: '#4a148c',
+  // Charcoal - Secondary brand color
+  charcoal: {
+    50: '#f7f7f7',
+    100: '#e1e1e1',
+    200: '#cfcfcf',
+    300: '#b1b1b1',
+    400: '#9e9e9e',
+    500: '#7e7e7e',
+    600: '#626262',
+    700: '#515151',
+    800: '#3b3b3b',  // Charcoal
+    900: '#222222',
   },
-  // Neutral colors
+  // Neutral colors - Whites and blacks
   neutral: {
     0: '#ffffff',
     50: '#fafafa',
@@ -69,7 +69,38 @@ export const colors = {
     900: '#212121',
     1000: '#000000',
   },
-  // Semantic colors
+  // Accent - Subtle gold for minimal use
+  gold: {
+    light: '#f4e4bc',
+    main: '#d4af37',
+    dark: '#b8941f',
+  },
+  // Legacy compatibility - map to new colors
+  primary: {
+    50: '#f0f4f8',
+    100: '#d9e2ec',
+    200: '#bcccdc',
+    300: '#9fb3c8',
+    400: '#829ab1',
+    500: '#627d98',
+    600: '#486581',
+    700: '#334e68',
+    800: '#243b53',
+    900: '#102a43',
+  },
+  secondary: {
+    50: '#f7f7f7',
+    100: '#e1e1e1',
+    200: '#cfcfcf',
+    300: '#b1b1b1',
+    400: '#9e9e9e',
+    500: '#7e7e7e',
+    600: '#626262',
+    700: '#515151',
+    800: '#3b3b3b',
+    900: '#222222',
+  },
+  // Semantic colors - Minimal, professional
   success: {
     light: '#81c784',
     main: '#4caf50',
@@ -104,13 +135,15 @@ export const colors = {
   },
 } as const;
 
-// Typography
+// Typography - Rivaro Luxury Brand
 export const typography = {
   fontFamily: {
-    primary: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
-    secondary: 'Georgia, "Times New Roman", Times, serif',
+    heading: '"Cormorant Garamond", "Playfair Display", Georgia, serif',  // Elegant serif for headings
+    body: '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif',  // Clean sans-serif for body
+    primary: '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
+    secondary: '"Cormorant Garamond", Georgia, "Times New Roman", Times, serif',
     mono: '"Courier New", Courier, monospace',
-    hebrew: '"Rubik", "Heebo", "Assistant", sans-serif',
+    hebrew: '"Assistant", "Rubik", "Heebo", sans-serif',
   },
   fontSize: {
     xs: '0.75rem',    // 12px
@@ -127,8 +160,8 @@ export const typography = {
   fontWeight: {
     thin: 100,
     extralight: 200,
-    light: 300,
-    normal: 400,
+    light: 300,      // Primary weight for luxury headings
+    normal: 400,     // Primary weight for body text
     medium: 500,
     semibold: 600,
     bold: 700,

@@ -1,0 +1,155 @@
+/* Hero Section - Rivaro Luxury Brand */
+
+.hero {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  width: 100%;
+}
+
+.grid {
+  align-items: center;
+}
+
+.content {
+  max-width: 600px;
+}
+
+.overline {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.75rem;
+  color: #626262;
+}
+
+.heading {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 300;
+  color: #222222;
+  line-height: 1.1;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.subheadline {
+  font-family: 'Assistant', 'Rubik', 'Heebo', sans-serif;
+  direction: rtl;
+  text-align: right;
+}
+
+.description {
+  font-family: 'Assistant', 'Rubik', 'Heebo', sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: #626262;
+  max-width: 540px;
+  direction: rtl;
+  text-align: right;
+}
+
+.actions {
+  margin-top: 1rem;
+  direction: rtl;
+}
+
+.primaryCta {
+  transition: all 0.3s ease;
+}
+
+.primaryCta:hover:not(:disabled) {
+  background: #102a43;
+  border-color: #102a43;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(36, 59, 83, 0.2);
+}
+
+.imageWrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 600px;
+}
+
+.imagePlaceholder {
+  width: 100%;
+  height: 600px;
+  background-color: #f7f7f7;
+  border: 1px solid #e1e1e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0;
+  animation: zoomIn 1.5s ease-out forwards;
+  transform-origin: center;
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .container {
+    padding: 3rem 1.5rem;
+  }
+
+  .content {
+    max-width: 100%;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .actions button {
+    width: 100%;
+  }
+
+  .imageWrapper {
+    min-height: 400px;
+    margin-top: 2rem;
+  }
+
+  .imagePlaceholder {
+    height: 400px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    padding: 3rem 2rem;
+  }
+
+  .imagePlaceholder {
+    height: 500px;
+  }
+}
