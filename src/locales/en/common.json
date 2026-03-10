@@ -1,0 +1,286 @@
+{
+  "app": {
+    "title": "Universal Template",
+    "description": "React TypeScript Template with Redux Toolkit"
+  },
+  "demo": {
+    "title": "Component Gallery",
+    "subtitle": "Usage examples for all base components",
+    "buttons": {
+      "title": "Buttons",
+      "description": "Buttons in different styles and sizes"
+    },
+    "inputs": {
+      "title": "Input Fields",
+      "description": "Text fields, textarea, and more",
+      "placeholder": "Type text here...",
+      "textareaPlaceholder": "Type long text here...",
+      "withError": "Field with error",
+      "errorMessage": "This field is required"
+    },
+    "selects": {
+      "title": "Selection Lists",
+      "description": "Select and MultiSelect with search",
+      "singleSelect": "Single Selection",
+      "multiSelect": "Multiple Selection",
+      "roles": "Roles",
+      "skills": "Technical Skills",
+      "selectedRoles": "Selected Roles",
+      "selectedSkills": "Selected Skills",
+      "none": "None",
+      "rolesSelected": "{{count}} roles selected",
+      "skillsSelected": "{{count}} skills selected"
+    },
+    "cards": {
+      "title": "Cards",
+      "description": "Cards in different styles",
+      "flat": "Flat Card",
+      "outlined": "Outlined Card",
+      "elevated": "Elevated Card"
+    },
+    "layout": {
+      "title": "Layout Components",
+      "description": "Flex, Grid, Stack for content layout",
+      "flexExample": "Flex - Flexible Layout",
+      "gridExample": "Grid - Responsive Grid",
+      "stackExample": "Stack - Vertical/Horizontal Stack"
+    },
+    "typography": {
+      "title": "Typography",
+      "description": "Headings, paragraphs, and texts",
+      "heading1": "Main Heading (H1)",
+      "heading2": "Secondary Heading (H2)",
+      "heading3": "Tertiary Heading (H3)",
+      "body1": "Regular Text - Body 1",
+      "body2": "Small Text - Body 2",
+      "caption": "Caption Text"
+    },
+    "toast": {
+      "title": "Toast Notifications",
+      "description": "Temporary messages for users",
+      "success": "Success",
+      "error": "Error",
+      "warning": "Warning",
+      "info": "Info",
+      "quick": "Quick (1 second)",
+      "long": "Long (10 seconds)",
+      "noAutoClose": "No Auto-Close",
+      "successMessage": "Operation completed successfully!",
+      "errorMessage": "Something went wrong!",
+      "warningMessage": "Be careful with this action",
+      "infoMessage": "Here is some useful information"
+    },
+    "responsive": {
+      "title": "Responsive Display",
+      "description": "The system detects device type",
+      "currentDevice": "Current Device",
+      "mobile": "Mobile (< 768px)",
+      "tablet": "Tablet (768px - 991px)",
+      "desktop": "Desktop (≥ 992px)",
+      "showDevice": "Show Current Device"
+    },
+    "modal": {
+      "title": "Modal Dialogs",
+      "description": "Popup windows for information and actions",
+      "openModal": "Open Modal",
+      "modalTitle": "Modal Title",
+      "modalContent": "This is the modal content. Here you can display information, forms, or any other content.",
+      "confirmAction": "Confirm Action",
+      "confirmMessage": "Are you sure you want to perform this action?",
+      "confirm": "Confirm",
+      "withForm": "Modal with Form"
+    },
+    "loading": {
+      "title": "Loading Indicators",
+      "description": "Loading states and spinners",
+      "defaultSpinner": "Default Spinner",
+      "smallSpinner": "Small Spinner",
+      "largeSpinner": "Large Spinner",
+      "withText": "With Text",
+      "loadingText": "Loading data...",
+      "simulateLoading": "Simulate Loading"
+    },
+    "forms": {
+      "title": "Form Fields",
+      "description": "Fields with labels and errors",
+      "username": "Username",
+      "email": "Email",
+      "password": "Password",
+      "message": "Message",
+      "required": "This field is required",
+      "invalidEmail": "Invalid email address"
+    },
+    "selections": {
+      "title": "Selections & Controls",
+      "description": "Checkbox, Radio, Switch and more",
+      "checkbox": "Checkbox",
+      "checkboxLabel": "I agree to terms and conditions",
+      "checkboxIndeterminate": "Partial selection",
+      "radio": "Radio",
+      "radioOption1": "Option 1",
+      "radioOption2": "Option 2",
+      "radioOption3": "Option 3",
+      "switch": "Switch/Toggle",
+      "switchLabel": "Enable notifications",
+      "switchSmall": "Small",
+      "switchMedium": "Medium",
+      "switchLarge": "Large"
+    },
+    "tabs": {
+      "title": "Tabs",
+      "description": "Navigate between different contents",
+      "tab1": "Profile",
+      "tab2": "Settings",
+      "tab3": "Notifications",
+      "tab1Content": "This is the Profile tab content. Here you can see user details.",
+      "tab2Content": "This is the Settings tab content. Here you can change settings.",
+      "tab3Content": "This is the Notifications tab content. Here you can manage notifications.",
+      "pillsVariant": "Pills Style"
+    },
+    "badges": {
+      "title": "Badges",
+      "description": "Small status indicators",
+      "primary": "Primary",
+      "secondary": "Secondary",
+      "success": "Success",
+      "error": "Error",
+      "warning": "Warning",
+      "info": "Info",
+      "dot": "Dot",
+      "sizes": "Sizes"
+    },
+    "avatars": {
+      "title": "Avatars",
+      "description": "Profile pictures and initials",
+      "withImage": "With Image",
+      "withInitials": "With Initials",
+      "sizes": "Sizes",
+      "variants": "Variants"
+    },
+    "tooltips": {
+      "title": "Tooltips",
+      "description": "Additional info on hover",
+      "hoverMe": "Hover Me",
+      "top": "Top",
+      "bottom": "Bottom",
+      "left": "Left",
+      "right": "Right",
+      "tooltipText": "This is tooltip text"
+    },
+    "features": {
+      "title": "System Features",
+      "theming": {
+        "title": "🎨 Theming",
+        "description": "Centralized theme system with easy customization"
+      },
+      "responsive": {
+        "title": "📱 Responsive",
+        "description": "Mobile-first design with breakpoint utilities"
+      },
+      "i18n": {
+        "title": "🌐 i18n & RTL",
+        "description": "Full internationalization and RTL support"
+      },
+      "redux": {
+        "title": "⚡ Redux Toolkit",
+        "description": "State management with RTK Query"
+      }
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "save": "Save",
+    "ok": "OK",
+    "delete": "Delete",
+    "edit": "Edit",
+    "add": "Add",
+    "search": "Search",
+    "close": "Close",
+    "submit": "Submit",
+    "reset": "Reset",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "yes": "Yes",
+    "no": "No",
+    "select": "Select",
+    "selectAll": "Select All",
+    "deselectAll": "Deselect All",
+    "clearAll": "Clear All",
+    "remove": "Remove",
+    "noResults": "No results found",
+    "tryAgain": "Try again",
+    "searchPlaceholder": "Search..."
+  },
+  "validation": {
+    "required": "This field is required",
+    "email": "Invalid email address",
+    "minLength": "Minimum length: {{min}} characters",
+    "maxLength": "Maximum length: {{max}} characters",
+    "min": "Minimum value: {{min}}",
+    "max": "Maximum value: {{max}}"
+  },
+  "errors": {
+    "generic": "An error occurred. Please try again.",
+    "network": "Network error. Check your connection.",
+    "notFound": "Item not found",
+    "unauthorized": "Unauthorized",
+    "forbidden": "Access denied"
+  },
+  "components": {
+    "table": {
+      "title": "Data Table",
+      "description": "Sortable table with pagination",
+      "noData": "No data available",
+      "rowsPerPage": "Rows per page"
+    },
+    "skeleton": {
+      "title": "Skeleton Loaders",
+      "description": "Loading placeholders for better UX",
+      "text": "Text Skeleton",
+      "circular": "Circular Skeleton",
+      "rectangular": "Rectangular Skeleton"
+    },
+    "breadcrumbs": {
+      "title": "Breadcrumbs",
+      "description": "Navigation breadcrumbs",
+      "home": "Home",
+      "products": "Products",
+      "category": "Category",
+      "item": "Item Details"
+    },
+    "accordion": {
+      "title": "Accordion",
+      "description": "Collapsible content panels",
+      "section1": "Section 1",
+      "section2": "Section 2",
+      "section3": "Section 3",
+      "content": "This is the content of the accordion panel. It can contain any type of content."
+    },
+    "datePicker": {
+      "title": "Date Picker",
+      "description": "Calendar date selection",
+      "selectDate": "Select a date",
+      "startDate": "Start Date",
+      "endDate": "End Date"
+    },
+    "slider": {
+      "title": "Slider",
+      "description": "Range slider for value selection",
+      "volume": "Volume",
+      "price": "Price Range",
+      "temperature": "Temperature"
+    },
+    "progressBar": {
+      "title": "Progress Bar",
+      "description": "Visual progress indicators",
+      "default": "Default Progress",
+      "success": "Success Progress",
+      "warning": "Warning Progress",
+      "error": "Error Progress"
+    }
+  }
+}

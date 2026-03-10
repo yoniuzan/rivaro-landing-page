@@ -1,0 +1,182 @@
+.typography {
+  margin: 0;
+  padding: 0;
+  color: inherit;
+}
+
+/* Variants */
+.typography--h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.typography--h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+}
+
+.typography--h3 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+
+.typography--h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+}
+
+.typography--h5 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: -0.005em;
+}
+
+.typography--h6 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 0;
+}
+
+.typography--body1 {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+}
+
+.typography--body2 {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+}
+
+.typography--caption {
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #6b7280;
+}
+
+.typography--overline {
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.5;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #4b5563;
+}
+
+/* Alignment */
+.typography--align-left {
+  text-align: left;
+}
+
+.typography--align-center {
+  text-align: center;
+}
+
+.typography--align-right {
+  text-align: right;
+}
+
+.typography--align-justify {
+  text-align: justify;
+}
+
+/* Colors */
+.typography--color-primary {
+  color: var(--color-primary-600);
+}
+
+.typography--color-secondary {
+  color: var(--color-secondary-600);
+}
+
+.typography--color-success {
+  color: var(--color-success-main);
+}
+
+.typography--color-error {
+  color: var(--color-error-main);
+}
+
+.typography--color-warning {
+  color: var(--color-warning-main);
+}
+
+.typography--color-info {
+  color: var(--color-info-main);
+}
+
+.typography--color-text-primary {
+  color: var(--color-neutral-900);
+}
+
+.typography--color-text-secondary {
+  color: var(--color-neutral-600);
+}
+
+/* Weight */
+.typography--weight-light {
+  font-weight: 300;
+}
+
+.typography--weight-normal {
+  font-weight: 400;
+}
+
+.typography--weight-medium {
+  font-weight: 500;
+}
+
+.typography--weight-semibold {
+  font-weight: 600;
+}
+
+.typography--weight-bold {
+  font-weight: 700;
+}
+
+/* RTL support */
+[dir='rtl'] .typography {
+  direction: rtl;
+}
+
+[dir='rtl'] .typography--align-left {
+  text-align: right;
+}
+
+[dir='rtl'] .typography--align-right {
+  text-align: left;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .typography--h1 {
+    font-size: 2.25rem;
+  }
+
+  .typography--h2 {
+    font-size: 1.875rem;
+  }
+
+  .typography--h3 {
+    font-size: 1.5rem;
+  }
+
+  .typography--h4 {
+    font-size: 1.25rem;
+  }
+}

@@ -1,0 +1,113 @@
+.skeleton {
+  display: block;
+  background-color: #e5e7eb;
+  border-radius: 0.375rem;
+  margin-bottom: 0.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Variants */
+.skeleton--text {
+  border-radius: 0.375rem;
+  transform-origin: 0 55%;
+  transform: scale(1, 0.6);
+  margin-bottom: 0.375rem;
+}
+
+.skeleton--circular {
+  border-radius: 50%;
+}
+
+.skeleton--rectangular {
+  border-radius: 0;
+}
+
+.skeleton--rounded {
+  border-radius: 0.75rem;
+}
+
+/* Animations */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes wave {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.skeleton--pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.skeleton--wave {
+  background: linear-gradient(
+    90deg,
+    #e5e7eb 0%,
+    #e5e7eb 40%,
+    #f3f4f6 50%,
+    #e5e7eb 60%,
+    #e5e7eb 100%
+  );
+  background-size: 200% 100%;
+  animation: wave 2s linear infinite;
+}
+
+.skeleton--wave::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.6) 50%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s linear infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* RTL support */
+[dir='rtl'] .skeleton--wave {
+  animation-direction: reverse;
+}
+
+[dir='rtl'] .skeleton--wave::after {
+  animation-direction: reverse;
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .skeleton--pulse,
+  .skeleton--wave,
+  .skeleton--wave::after {
+    animation: none;
+  }
+  
+  .skeleton {
+    opacity: 0.7;
+  }
+}
+

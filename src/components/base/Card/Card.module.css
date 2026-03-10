@@ -1,0 +1,189 @@
+/* CSS Variables for Card */
+:root {
+  --card-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --card-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --card-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --card-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --card-shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: visible;
+}
+
+/* Variants */
+.card--elevated {
+  box-shadow: var(--card-shadow-md);
+}
+
+.card--elevated:hover {
+  box-shadow: var(--card-shadow-lg);
+}
+
+.card--outlined {
+  border: 1.5px solid #e5e7eb;
+  box-shadow: var(--card-shadow-sm);
+}
+
+.card--outlined:hover {
+  border-color: #d1d5db;
+  box-shadow: var(--card-shadow-md);
+}
+
+.card--filled {
+  background-color: #f9fafb;
+  border: 1px solid #f3f4f6;
+}
+
+.card--filled:hover {
+  background-color: #f3f4f6;
+}
+
+.card--glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+}
+
+.card--glass:hover {
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+}
+
+/* Padding */
+.card--padding-none {
+  padding: 0;
+}
+
+.card--padding-sm {
+  padding: 1rem;
+}
+
+.card--padding-md {
+  padding: 1.5rem;
+}
+
+.card--padding-lg {
+  padding: 2rem;
+}
+
+/* Hoverable */
+.card--hoverable:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--card-shadow-xl);
+}
+
+.card--hoverable {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Clickable */
+.card--clickable {
+  cursor: pointer;
+  user-select: none;
+}
+
+.card--clickable:hover {
+  transform: translateY(-2px);
+}
+
+.card--clickable:active {
+  transform: translateY(0);
+  transition-duration: 0.1s;
+}
+
+.card--clickable.card--elevated:hover {
+  box-shadow: var(--card-shadow-xl);
+}
+
+.card--clickable.card--outlined:hover {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1), var(--card-shadow-lg);
+}
+
+/* Shine effect on hover */
+.card--clickable::before,
+.card--hoverable::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transition: left 0.5s ease-in-out;
+  pointer-events: none;
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+
+.card--clickable:hover::before,
+.card--hoverable:hover::before {
+  left: 100%;
+}
+
+/* RTL support */
+[dir='rtl'] .card {
+  direction: rtl;
+}
+
+[dir='rtl'] .card--clickable::before,
+[dir='rtl'] .card--hoverable::before {
+  left: auto;
+  right: -100%;
+}
+
+[dir='rtl'] .card--clickable:hover::before,
+[dir='rtl'] .card--hoverable:hover::before {
+  left: auto;
+  right: 100%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .card {
+    border-radius: 0.625rem;
+  }
+  
+  .card--padding-sm {
+    padding: 0.875rem;
+  }
+  
+  .card--padding-md {
+    padding: 1.25rem;
+  }
+
+  .card--padding-lg {
+    padding: 1.5rem;
+  }
+  
+  .card--clickable:hover,
+  .card--hoverable:hover {
+    transform: translateY(-1px);
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .card--clickable,
+  .card--hoverable {
+    transition: none;
+  }
+  
+  .card--clickable::before,
+  .card--hoverable::before {
+    display: none;
+  }
+}

@@ -1,0 +1,51 @@
+# Project Rules & Context for AI Assistant (Cursor)
+
+This project is a generic, reusable React Component Library designed to be imported into other repositories.
+
+## Core Principles
+
+1.  **Zero External UI Dependencies:** NEVER use Material-UI (MUI), Chakra UI, AntD, or any other UI component library.
+    *   All components must be built from scratch using native HTML/CSS.
+    *   Use `date-fns` for date logic, but the UI must be custom (as implemented in `DatePicker`).
+    *   Use standard HTML inputs (`range`, `date`, `text`, `checkbox`, etc.) styled via CSS.
+
+2.  **Styling:**
+    *   Use **CSS Modules** (`*.module.css`) for all component styling.
+    *   NEVER use inline styles for static values.
+    *   Use **CSS Variables** for theming (defined in `src/constants/theme.ts` and injected via `ThemeProvider`).
+    *   Variables format: `var(--color-primary-500)`, `var(--spacing-md)`, `var(--radius-sm)`.
+    *   Support **RTL** (Right-to-Left) natively using standard CSS logic (e.g., `padding-inline-start` or `[dir='rtl']` selectors).
+
+3.  **Internationalization (i18n):**
+    *   All text must be localized using `react-i18next`.
+    *   NEVER hardcode strings in components. Use keys from `common.json`.
+    *   Support English (`en`) and Hebrew (`he`).
+
+4.  **State Management:**
+    *   Use **Redux Toolkit** for global state.
+    *   Use **RTK Query** for API calls.
+
+5.  **Testing:**
+    *   Use **Vitest** and **React Testing Library**.
+    *   Ensure tests cover RTL rendering and basic interactions.
+
+## Key Files & Directories
+
+*   `src/components/base/`: Core UI components (Button, Input, etc.).
+*   `src/widgets/`: Complex business logic components composed of base components.
+*   `src/constants/theme.ts`: The source of truth for design tokens.
+*   `src/locales/`: Translation files.
+*   `docs/`: Detailed documentation files.
+
+## Specific Component Instructions
+
+*   **Slider:** Uses native `<input type="range">` with `touch-action: pan-y` for mobile scrolling support.
+*   **DatePicker:** Custom implementation using `date-fns`. Do not import external date pickers.
+*   **Icons:** Use SVG icons directly or a lightweight icon library if configured. Do not pull in heavy icon packs.
+
+## When Generating Code
+
+*   Always check for existing patterns in `src/components/base`.
+*   Ensure accessibility (ARIA attributes) is preserved.
+*   When editing CSS, ensure both LTR and RTL are supported.
+

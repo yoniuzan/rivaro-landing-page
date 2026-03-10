@@ -1,0 +1,9 @@
+.grid {
+  display: grid;
+}
+
+/* RTL support */
+[dir='rtl'] .grid {
+  direction: rtl;
+}
+

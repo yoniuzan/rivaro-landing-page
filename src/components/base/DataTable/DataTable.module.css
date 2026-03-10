@@ -1,0 +1,133 @@
+.container {
+  width: 100%;
+  overflow-x: auto;
+  border: 2px solid #e5e7eb;
+  border-radius: 0.875rem;
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9375rem;
+  text-align: left;
+}
+
+.th {
+  padding: 1rem 1.25rem;
+  font-weight: 700;
+  color: #1f2937;
+  border-bottom: 2px solid #e5e7eb;
+  background: linear-gradient(180deg, #f9fafb 0%, #f3f4f6 100%);
+  white-space: nowrap;
+  user-select: none;
+  letter-spacing: 0.01em;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.th--sortable {
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.th--sortable:hover {
+  background: linear-gradient(180deg, #f3f4f6 0%, #e5e7eb 100%);
+  color: #667eea;
+}
+
+.td {
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid #f3f4f6;
+  color: #374151;
+  font-weight: 500;
+}
+
+.tr:last-child .td {
+  border-bottom: none;
+}
+
+.tr {
+  transition: background-color 0.15s ease;
+  position: relative;
+}
+
+.tr:hover {
+  background-color: rgba(102, 126, 234, 0.04);
+}
+
+.tr--clickable {
+  cursor: pointer;
+}
+
+.tr--clickable:hover {
+  background-color: rgba(102, 126, 234, 0.08);
+}
+
+/* Sorting Icon */
+.sort-icon {
+  display: inline-block;
+  margin-left: 0.25rem;
+  font-size: 0.75rem;
+  color: var(--color-neutral-500);
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0.75rem 1rem;
+  border-top: 1px solid var(--color-neutral-200);
+  gap: 1rem;
+  color: var(--color-neutral-600);
+  font-size: 0.875rem;
+}
+
+.pagination-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.pagination-btn {
+  padding: 0.25rem 0.5rem;
+  border: 1px solid var(--color-neutral-300);
+  background: white;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.pagination-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: var(--color-neutral-100);
+}
+
+.pagination-select {
+  padding: 0.25rem;
+  border: 1px solid var(--color-neutral-300);
+  border-radius: 0.25rem;
+  background-color: white;
+}
+
+/* Loading/Empty State */
+.state-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  color: var(--color-neutral-500);
+}
+
+/* RTL support */
+[dir='rtl'] .table {
+  text-align: right;
+}
+
+[dir='rtl'] .sort-icon {
+  margin-left: 0;
+  margin-right: 0.25rem;
+}
+

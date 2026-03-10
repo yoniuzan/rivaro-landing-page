@@ -1,0 +1,280 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  min-height: 2.75rem;
+  padding: 0.5rem 0;
+}
+
+.label--disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.radio {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  border: 2px solid #d1d5db;
+  border-radius: 50%;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.radio--sm {
+  width: 1rem;
+  height: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
+}
+
+.radio--md {
+  width: 1.25rem;
+  height: 1.25rem;
+  min-width: 1.25rem;
+  min-height: 1.25rem;
+}
+
+.radio--lg {
+  width: 1.5rem;
+  height: 1.5rem;
+  min-width: 1.5rem;
+  min-height: 1.5rem;
+}
+
+.dot {
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  position: relative;
+  z-index: 2;
+}
+
+.radio--sm .dot {
+  width: 0.5rem;
+  height: 0.5rem;
+}
+
+.radio--md .dot {
+  width: 0.625rem;
+  height: 0.625rem;
+}
+
+.radio--lg .dot {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+/* Ripple effect */
+.ripple {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: rgba(102, 126, 234, 0.3);
+  transform: scale(0);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Hover state */
+.label:hover:not(.label--disabled) .radio {
+  border-color: #667eea;
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+}
+
+.label:hover:not(.label--disabled) .ripple {
+  animation: ripple-pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes ripple-pulse {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(0.9);
+    opacity: 0.1;
+  }
+  100% {
+    transform: scale(0.6);
+    opacity: 0.3;
+  }
+}
+
+/* Checked state */
+.input:checked ~ .radio {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-color: #667eea;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+.input:checked ~ .radio .dot {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.input:checked ~ .radio .ripple {
+  animation: ripple-check 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes ripple-check {
+  0% {
+    transform: scale(0);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+/* Focus state */
+.input:focus-visible ~ .radio {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+}
+
+/* Active state */
+.label:active:not(.label--disabled) .radio {
+  transform: scale(0.95);
+}
+
+/* Disabled state */
+.input:disabled ~ .radio {
+  background-color: #f3f4f6;
+  border-color: #e5e7eb;
+  cursor: not-allowed;
+}
+
+.input:disabled:checked ~ .radio {
+  background: #d1d5db;
+  border-color: #d1d5db;
+}
+
+/* Error state */
+.label--error .radio {
+  border-color: #ef4444;
+}
+
+.label--error:hover:not(.label--disabled) .radio {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.1);
+}
+
+.label--error .input:checked ~ .radio {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  border-color: #ef4444;
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.3);
+}
+
+.text {
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #1f2937;
+  transition: color 0.2s ease-in-out;
+}
+
+.wrapper--sm .text {
+  font-size: 0.875rem;
+}
+
+.wrapper--lg .text {
+  font-size: 1rem;
+}
+
+.label--disabled .text {
+  color: #9ca3af;
+}
+
+/* Helper text */
+.helper-text {
+  font-size: 0.8125rem;
+  color: #6b7280;
+  margin-inline-start: 2rem;
+  animation: slideDown 0.2s ease-in-out;
+}
+
+.helper-text--error {
+  font-size: 0.8125rem;
+  color: #ef4444;
+  margin-inline-start: 2rem;
+  animation: slideDown 0.2s ease-in-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-0.25rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RTL support */
+[dir='rtl'] .label {
+  direction: rtl;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .label {
+    min-height: 3rem;
+  }
+  
+  .radio--sm {
+    width: 1.125rem;
+    height: 1.125rem;
+  }
+  
+  .radio--md {
+    width: 1.375rem;
+    height: 1.375rem;
+  }
+  
+  .radio--lg {
+    width: 1.625rem;
+    height: 1.625rem;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .radio,
+  .dot,
+  .ripple,
+  .text {
+    transition: none;
+    animation: none;
+  }
+}

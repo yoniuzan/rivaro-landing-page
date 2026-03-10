@@ -1,0 +1,286 @@
+{
+  "app": {
+    "title": "תבנית אוניברסלית",
+    "description": "תבנית React TypeScript עם Redux Toolkit"
+  },
+  "demo": {
+    "title": "גלריית קומפוננטות",
+    "subtitle": "דוגמאות שימוש לכל הקומפוננטות הבסיסיות",
+    "buttons": {
+      "title": "כפתורים",
+      "description": "כפתורים בסגנונות וגדלים שונים"
+    },
+    "inputs": {
+      "title": "שדות קלט",
+      "description": "שדות טקסט, textarea, ועוד",
+      "placeholder": "הקלד טקסט כאן...",
+      "textareaPlaceholder": "הקלד טקסט ארוך כאן...",
+      "withError": "שדה עם שגיאה",
+      "errorMessage": "שדה זה הוא חובה"
+    },
+    "selects": {
+      "title": "רשימות בחירה",
+      "description": "Select ו-MultiSelect עם חיפוש",
+      "singleSelect": "בחירה בודדת",
+      "multiSelect": "בחירה מרובה",
+      "roles": "תפקידים",
+      "skills": "כישורים טכנולוגיים",
+      "selectedRoles": "תפקידים שנבחרו",
+      "selectedSkills": "כישורים שנבחרו",
+      "none": "אין",
+      "rolesSelected": "נבחרו {{count}} תפקידים",
+      "skillsSelected": "נבחרו {{count}} כישורים"
+    },
+    "cards": {
+      "title": "כרטיסים",
+      "description": "כרטיסים בסגנונות שונים",
+      "flat": "כרטיס שטוח",
+      "outlined": "כרטיס עם מסגרת",
+      "elevated": "כרטיס מוצל"
+    },
+    "layout": {
+      "title": "רכיבי פריסה",
+      "description": "Flex, Grid, Stack לפריסת תוכן",
+      "flexExample": "Flex - פריסה גמישה",
+      "gridExample": "Grid - רשת רספונסיבית",
+      "stackExample": "Stack - ערימה אנכית/אופקית"
+    },
+    "typography": {
+      "title": "טיפוגרפיה",
+      "description": "כותרות, פסקאות, וטקסטים",
+      "heading1": "כותרת ראשית (H1)",
+      "heading2": "כותרת משנית (H2)",
+      "heading3": "כותרת שלישית (H3)",
+      "body1": "טקסט רגיל - Body 1",
+      "body2": "טקסט קטן - Body 2",
+      "caption": "כיתוב - Caption"
+    },
+    "toast": {
+      "title": "התראות Toast",
+      "description": "הודעות זמניות למשתמש",
+      "success": "הצלחה",
+      "error": "שגיאה",
+      "warning": "אזהרה",
+      "info": "מידע",
+      "quick": "מהיר (1 שניה)",
+      "long": "ארוך (10 שניות)",
+      "noAutoClose": "ללא סגירה אוטומטית",
+      "successMessage": "הפעולה הושלמה בהצלחה!",
+      "errorMessage": "משהו השתבש!",
+      "warningMessage": "היזהר עם פעולה זו",
+      "infoMessage": "הנה מידע שימושי"
+    },
+    "responsive": {
+      "title": "תצוגה רספונסיבית",
+      "description": "המערכת מזהה את סוג המכשיר",
+      "currentDevice": "מכשיר נוכחי",
+      "mobile": "מובייל (< 768px)",
+      "tablet": "טאבלט (768px - 991px)",
+      "desktop": "דסקטופ (≥ 992px)",
+      "showDevice": "הצג מכשיר נוכחי"
+    },
+    "modal": {
+      "title": "חלונות מודאליים",
+      "description": "חלונות קופצים למידע ופעולות",
+      "openModal": "פתח מודאל",
+      "modalTitle": "כותרת המודאל",
+      "modalContent": "זהו תוכן המודאל. כאן תוכל להציג מידע, טפסים, או כל תוכן אחר.",
+      "confirmAction": "אישור פעולה",
+      "confirmMessage": "האם אתה בטוח שברצונך לבצע פעולה זו?",
+      "confirm": "אישור",
+      "withForm": "מודאל עם טופס"
+    },
+    "loading": {
+      "title": "אינדיקטורי טעינה",
+      "description": "מצבי טעינה וספינרים",
+      "defaultSpinner": "ספינר רגיל",
+      "smallSpinner": "ספינר קטן",
+      "largeSpinner": "ספינר גדול",
+      "withText": "עם טקסט",
+      "loadingText": "טוען נתונים...",
+      "simulateLoading": "סימולציית טעינה"
+    },
+    "forms": {
+      "title": "שדות טופס",
+      "description": "שדות עם תוויות ושגיאות",
+      "username": "שם משתמש",
+      "email": "אימייל",
+      "password": "סיסמה",
+      "message": "הודעה",
+      "required": "שדה חובה",
+      "invalidEmail": "כתובת אימייל לא תקינה"
+    },
+    "selections": {
+      "title": "בחירות ובקרות",
+      "description": "Checkbox, Radio, Switch ועוד",
+      "checkbox": "Checkbox",
+      "checkboxLabel": "אני מסכים לתנאי השימוש",
+      "checkboxIndeterminate": "בחירה חלקית",
+      "radio": "Radio",
+      "radioOption1": "אופציה 1",
+      "radioOption2": "אופציה 2",
+      "radioOption3": "אופציה 3",
+      "switch": "Switch/Toggle",
+      "switchLabel": "הפעל התראות",
+      "switchSmall": "קטן",
+      "switchMedium": "בינוני",
+      "switchLarge": "גדול"
+    },
+    "tabs": {
+      "title": "טאבים",
+      "description": "ניווט בין תכנים שונים",
+      "tab1": "פרופיל",
+      "tab2": "הגדרות",
+      "tab3": "התראות",
+      "tab1Content": "זהו תוכן הטאב פרופיל. כאן תוכל לראות את פרטי המשתמש.",
+      "tab2Content": "זהו תוכן הטאב הגדרות. כאן תוכל לשנות הגדרות.",
+      "tab3Content": "זהו תוכן הטאב התראות. כאן תוכל לנהל התראות.",
+      "pillsVariant": "סגנון Pills"
+    },
+    "badges": {
+      "title": "תגיות (Badges)",
+      "description": "אינדיקטורים קטנים למצבים",
+      "primary": "ראשי",
+      "secondary": "משני",
+      "success": "הצלחה",
+      "error": "שגיאה",
+      "warning": "אזהרה",
+      "info": "מידע",
+      "dot": "נקודה",
+      "sizes": "גדלים"
+    },
+    "avatars": {
+      "title": "אווטרים",
+      "description": "תמונות פרופיל ואתחולים",
+      "withImage": "עם תמונה",
+      "withInitials": "עם אותיות",
+      "sizes": "גדלים",
+      "variants": "סוגים"
+    },
+    "tooltips": {
+      "title": "Tooltips",
+      "description": "מידע נוסף בהובר",
+      "hoverMe": "רחף עלי",
+      "top": "למעלה",
+      "bottom": "למטה",
+      "left": "שמאל",
+      "right": "ימין",
+      "tooltipText": "זהו טקסט הטולטיפ"
+    },
+    "features": {
+      "title": "תכונות המערכת",
+      "theming": {
+        "title": "🎨 עיצוב",
+        "description": "מערכת עיצוב מרכזית עם התאמה אישית קלה"
+      },
+      "responsive": {
+        "title": "📱 רספונסיבי",
+        "description": "עיצוב Mobile-First עם כלי עזר לנקודות שבירה"
+      },
+      "i18n": {
+        "title": "🌐 i18n & RTL",
+        "description": "תמיכה מלאה בבינאום ו-RTL"
+      },
+      "redux": {
+        "title": "⚡ Redux Toolkit",
+        "description": "ניהול מצב עם RTK Query"
+      }
+    }
+  },
+  "common": {
+    "loading": "טוען...",
+    "error": "שגיאה",
+    "success": "הצלחה",
+    "cancel": "ביטול",
+    "save": "שמור",
+    "ok": "שמור",
+    "delete": "מחק",
+    "edit": "ערוך",
+    "add": "הוסף",
+    "search": "חיפוש",
+    "close": "סגור",
+    "submit": "שלח",
+    "reset": "אפס",
+    "back": "חזור",
+    "next": "הבא",
+    "previous": "הקודם",
+    "yes": "כן",
+    "no": "לא",
+    "select": "בחר",
+    "selectAll": "בחר הכל",
+    "deselectAll": "בטל בחירת הכל",
+    "clearAll": "נקה הכל",
+    "remove": "הסר",
+    "noResults": "לא נמצאו תוצאות",
+    "tryAgain": "נסה שוב",
+    "searchPlaceholder": "חיפוש..."
+  },
+  "validation": {
+    "required": "שדה חובה",
+    "email": "כתובת אימייל לא תקינה",
+    "minLength": "אורך מינימלי: {{min}} תווים",
+    "maxLength": "אורך מקסימלי: {{max}} תווים",
+    "min": "ערך מינימלי: {{min}}",
+    "max": "ערך מקסימלי: {{max}}"
+  },
+  "errors": {
+    "generic": "אירעה שגיאה. אנא נסה שוב.",
+    "network": "שגיאת רשת. בדוק את החיבור שלך.",
+    "notFound": "הפריט לא נמצא",
+    "unauthorized": "אין הרשאה",
+    "forbidden": "גישה נדחתה"
+  },
+  "components": {
+    "table": {
+      "title": "טבלת נתונים",
+      "description": "טבלה עם מיון ועימוד",
+      "noData": "אין נתונים זמינים",
+      "rowsPerPage": "שורות לעמוד"
+    },
+    "skeleton": {
+      "title": "שלדי טעינה",
+      "description": "מציינים מקום לתוכן בזמן טעינה",
+      "text": "שלד טקסט",
+      "circular": "שלד עגול",
+      "rectangular": "שלד מלבני"
+    },
+    "breadcrumbs": {
+      "title": "ניווט פירורי לחם",
+      "description": "ניווט היררכי",
+      "home": "בית",
+      "products": "מוצרים",
+      "category": "קטגוריה",
+      "item": "פרטי פריט"
+    },
+    "accordion": {
+      "title": "אקורדיון",
+      "description": "פאנלים מתקפלים",
+      "section1": "קטע 1",
+      "section2": "קטע 2",
+      "section3": "קטע 3",
+      "content": "זהו תוכן הפאנל המתקפל. הוא יכול להכיל כל סוג של תוכן."
+    },
+    "datePicker": {
+      "title": "בוחר תאריכים",
+      "description": "בחירת תאריך מלוח שנה",
+      "selectDate": "בחר תאריך",
+      "startDate": "תאריך התחלה",
+      "endDate": "תאריך סיום"
+    },
+    "slider": {
+      "title": "סליידר",
+      "description": "סליידר לבחירת ערכים",
+      "volume": "עוצמת קול",
+      "price": "טווח מחירים",
+      "temperature": "טמפרטורה"
+    },
+    "progressBar": {
+      "title": "פס התקדמות",
+      "description": "אינדיקטורים ויזואליים להתקדמות",
+      "default": "התקדמות רגילה",
+      "success": "התקדמות הצלחה",
+      "warning": "התקדמות אזהרה",
+      "error": "התקדמות שגיאה"
+    }
+  }
+}
