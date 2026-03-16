@@ -23,42 +23,42 @@ export const CollectionGallery: React.FC<CollectionGalleryProps> = ({ className 
       id: '1',
       title: 'חליפות חתן',
       category: 'חליפת חתן יוקרתית של ריבארו - עיצוב מושלם ליום המיוחד',
-      imageUrl: '/placeholder-groom.jpg',
+      imageUrl: '/assets/groom-suits.jpg',
       size: 'large',
     },
     {
       id: '2',
       title: 'Business Casual',
       category: 'חליפות עסקיות אלגנטיות - סגנון מקצועי ומעודן',
-      imageUrl: '/placeholder-business.jpg',
+      imageUrl: '/assets/business-casual.jpg',
       size: 'medium',
     },
     {
       id: '3',
-      title: 'טוקסידו',
-      category: 'טוקסידו יוקרתי של ריבארו - אלגנטיות קלאסית',
-      imageUrl: '/placeholder-tuxedo.jpg',
+      title: 'ספורט אלגנט',
+      category: 'ספורט אלגנט של ריבארו - שילוב מושלם של נוחות וסטייל',
+      imageUrl: '/assets/sport-elegant.jpg',
       size: 'large',
     },
     {
       id: '4',
       title: 'אביזרים',
       category: 'אביזרים מעוצבים לחליפה - פרטים שעושים את ההבדל',
-      imageUrl: '/placeholder-accessories.jpg',
+      imageUrl: '/assets/accessories.jpg',
       size: 'small',
     },
     {
       id: '5',
       title: 'חליפות ערב',
       category: 'חליפות ערב מעוצבות - יוקרה ואלגנטיות',
-      imageUrl: '/placeholder-evening.jpg',
+      imageUrl: '/assets/evening-suits.jpg',
       size: 'medium',
     },
     {
       id: '6',
       title: 'קז׳ואל יוקרתי',
       category: 'לבוש קז׳ואל יוקרתי - נוחות ללא ויתור על סטייל',
-      imageUrl: '/placeholder-casual.jpg',
+      imageUrl: '/assets/luxury-casual.jpg',
       size: 'small',
     },
   ];
@@ -127,11 +127,11 @@ export const CollectionGallery: React.FC<CollectionGalleryProps> = ({ className 
                 }`}
               >
                 <div className={styles.imageWrapper}>
-                  <div className={styles.imagePlaceholder} role="img" aria-label={`${item.title} - ${item.category}`}>
-                    <Typography variant="body2" color="text-secondary" align="center">
-                      {item.title}
-                    </Typography>
-                  </div>
+                  <img 
+                    src={item.imageUrl} 
+                    alt={`${item.title} - ${item.category}`}
+                    className={styles.galleryImage}
+                  />
                   <div className={styles.overlay}>
                     <Flex direction="column" gap={8} align="center" justify="center" className={styles.overlayContent}>
                       <Typography 
