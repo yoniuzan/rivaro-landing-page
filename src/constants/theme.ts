@@ -38,7 +38,7 @@ export const colors = {
     500: '#627d98',
     600: '#486581',
     700: '#334e68',
-    800: '#243b53',  // Deep midnight navy
+    800: '#193155',  // Deep midnight navy - RIVARO Primary
     900: '#102a43',
   },
   // Charcoal - Secondary brand color
@@ -85,7 +85,7 @@ export const colors = {
     500: '#627d98',
     600: '#486581',
     700: '#334e68',
-    800: '#243b53',
+    800: '#193155',  // RIVARO Primary
     900: '#102a43',
   },
   secondary: {

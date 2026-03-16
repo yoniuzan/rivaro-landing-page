@@ -1,0 +1,133 @@
+/* Process Section - Rivaro */
+
+.processSection {
+  width: 100%;
+  padding: 6rem 0 8rem 0;
+  background-color: #ffffff;
+  direction: rtl;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.heading {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  color: #193155;
+  direction: rtl;
+}
+
+.subtext {
+  font-family: 'Assistant', 'Rubik', 'Heebo', sans-serif;
+  color: #626262;
+  direction: rtl;
+}
+
+/* Steps Layout */
+.stepsWrapper {
+  display: grid;
+  grid-template-columns: repeat(7, auto);
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.step {
+  flex: 1;
+  min-width: 0;
+}
+
+.stepNumber {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid #193155;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.step:hover .stepNumber {
+  background-color: #193155;
+  transform: scale(1.05);
+}
+
+.numberText {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  color: #193155;
+  transition: color 0.3s ease;
+}
+
+.step:hover .numberText {
+  color: #ffffff;
+}
+
+.stepTitle {
+  font-family: 'Assistant', 'Rubik', 'Heebo', sans-serif;
+  color: #193155;
+  direction: rtl;
+  text-align: center;
+}
+
+.stepDescription {
+  font-family: 'Assistant', 'Rubik', 'Heebo', sans-serif;
+  color: #626262;
+  direction: rtl;
+  text-align: center;
+  line-height: 1.6;
+  max-width: 220px;
+}
+
+/* Divider between steps */
+.divider {
+  width: 1px;
+  height: 60px;
+  background-color: #e1e1e1;
+  align-self: flex-start;
+  margin-top: 40px;
+}
+
+/* Responsive - Tablet */
+@media (max-width: 1024px) {
+  .stepsWrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
+
+  .divider {
+    display: none;
+  }
+
+  .stepDescription {
+    max-width: 100%;
+  }
+}
+
+/* Responsive - Mobile */
+@media (max-width: 768px) {
+  .processSection {
+    padding: 4rem 0;
+  }
+
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  .stepsWrapper {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .stepNumber {
+    width: 70px;
+    height: 70px;
+  }
+
+  .heading {
+    font-size: 2rem;
+  }
+}

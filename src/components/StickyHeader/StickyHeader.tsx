@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Typography, Button, Flex } from '@components/base';
+import { CALMARK_URL } from '@constants/config';
 import styles from './StickyHeader.module.css';
 
 export interface StickyHeaderProps {
@@ -20,14 +21,11 @@ export const StickyHeader: React.FC<StickyHeaderProps> = ({ className = '' }) =>
   }, []);
 
   const handleBookNow = () => {
-    const bookingSection = document.getElementById('booking');
-    if (bookingSection) {
-      bookingSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+    window.open(CALMARK_URL, '_blank', 'noopener,noreferrer');
   };
 
   return (
-    <header className={`${styles.stickyHeader} ${isVisible ? styles.visible : ''} ${className}`}>
+    <header className={`${styles.stickyHeader} ${isVisible ? styles.visible : ''} ${className}`} role="banner" aria-label="Site header">
       <div className={styles.container}>
         <Flex direction="row" justify="between" align="center" className={styles.content}>
           <Typography 
@@ -43,6 +41,7 @@ export const StickyHeader: React.FC<StickyHeaderProps> = ({ className = '' }) =>
             size="md"
             onClick={handleBookNow}
             className={styles.bookButton}
+            aria-label="Book appointment"
           >
             קביעת פגישה
           </Button>

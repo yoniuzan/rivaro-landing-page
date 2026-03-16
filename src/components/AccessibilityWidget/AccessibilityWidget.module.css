@@ -1,0 +1,257 @@
+/* Accessibility Widget - Rivaro */
+
+.accessibilityButton {
+  position: fixed;
+  bottom: 9rem;
+  right: 2rem;
+  width: 60px;
+  height: 60px;
+  background-color: #193155;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(36, 59, 83, 0.3);
+  transition: all 0.3s ease;
+  z-index: 1001;
+  padding: 0;
+}
+
+.accessibilityButton:hover {
+  background-color: #102a43;
+  border-color: #d4af37;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(36, 59, 83, 0.4);
+}
+
+.icon {
+  width: 28px;
+  height: 28px;
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+.accessibilityButton:hover .icon {
+  color: #d4af37;
+}
+
+/* Panel */
+.panel {
+  position: fixed;
+  bottom: 10rem;
+  right: 5rem;
+  width: 320px;
+  background-color: #ffffff;
+  border: 1px solid #e1e1e1;
+  border-radius: 2px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  z-index: 1002;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.panelHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem;
+  border-bottom: 1px solid #e1e1e1;
+  direction: rtl;
+}
+
+.panelTitle {
+  font-family: 'Assistant', 'Rubik', 'Heebo', sans-serif;
+  color: #193155;
+  direction: rtl;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #626262;
+  cursor: pointer;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease;
+}
+
+.closeButton:hover {
+  color: #222222;
+}
+
+.panelContent {
+  padding: 1.25rem;
+  direction: rtl;
+}
+
+/* Controls */
+.control {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.control:last-child {
+  border-bottom: none;
+}
+
+.controlLabel {
+  font-family: 'Assistant', 'Rubik', 'Heebo', sans-serif;
+  color: #222222;
+  direction: rtl;
+  text-align: right;
+}
+
+.controlButton {
+  background-color: #f7f7f7;
+  border: 1px solid #e1e1e1;
+  border-radius: 2px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  color: #193155;
+  transition: all 0.3s ease;
+  min-width: 50px;
+}
+
+.controlButton:hover:not(:disabled) {
+  background-color: #193155;
+  color: #ffffff;
+  border-color: #193155;
+}
+
+.controlButton:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.fontSizeValue {
+  font-family: 'Inter', sans-serif;
+  color: #626262;
+  min-width: 50px;
+  text-align: center;
+}
+
+/* Toggle */
+.toggleLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  direction: rtl;
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #193155;
+}
+
+/* Reset Button */
+.resetButton {
+  width: 100%;
+  background-color: #f7f7f7;
+  border: 1px solid #e1e1e1;
+  border-radius: 2px;
+  padding: 0.75rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 0.5rem;
+}
+
+.resetButton:hover {
+  background-color: #193155;
+  border-color: #193155;
+}
+
+.resetButton:hover p {
+  color: #ffffff;
+}
+
+.resetButton p {
+  font-family: 'Assistant', 'Rubik', 'Heebo', sans-serif;
+  color: #193155;
+  direction: rtl;
+  transition: color 0.3s ease;
+}
+
+/* RTL Support */
+[dir='rtl'] .accessibilityButton {
+  right: auto;
+  left: 2rem;
+}
+
+[dir='rtl'] .panel {
+  right: auto;
+  left: 5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .accessibilityButton {
+    bottom: 8rem;
+    right: 1.5rem;
+    width: 56px;
+    height: 56px;
+  }
+
+  [dir='rtl'] .accessibilityButton {
+    right: auto;
+    left: 1.5rem;
+  }
+
+  .panel {
+    bottom: 9rem;
+    right: 1.5rem;
+    left: 1.5rem;
+    width: auto;
+  }
+
+  [dir='rtl'] .panel {
+    right: 1.5rem;
+    left: 1.5rem;
+  }
+
+  .icon {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+/* Global Accessibility Classes */
+:root.high-contrast {
+  --color-primary: #000000;
+  --color-secondary: #000000;
+  --color-text: #000000;
+  --color-background: #ffffff;
+}
+
+:root.high-contrast * {
+  border-color: #000000 !important;
+}
+
+:root.grayscale {
+  filter: grayscale(100%);
+}
+
+:root.underline-links a {
+  text-decoration: underline !important;
+}

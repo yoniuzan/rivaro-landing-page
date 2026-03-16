@@ -33,8 +33,8 @@ body {
 
 /* Scrollbar styling - Minimal luxury aesthetic */
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+  width: 4px;
+  height: 4px;
 }
 
 ::-webkit-scrollbar-track {
@@ -42,16 +42,22 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #3b3b3b;
+  background: #193155;
   border-radius: 0;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #222222;
+  background: #102a43;
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #193155 #fafafa;
 }
 
 /* Focus visible for accessibility - Midnight navy */
 *:focus-visible {
-  outline: 1px solid #243b53;
+  outline: 1px solid #193155;
   outline-offset: 2px;
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Typography, Button, Flex, Grid } from '@components/base';
+import { CALMARK_URL } from '@constants/config';
 import styles from './Hero.module.css';
 
 export interface HeroProps {
@@ -8,10 +9,7 @@ export interface HeroProps {
 
 export const Hero: React.FC<HeroProps> = ({ className = '' }) => {
   const handleBookAppointment = () => {
-    const bookingSection = document.getElementById('booking');
-    if (bookingSection) {
-      bookingSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+    window.open(CALMARK_URL, '_blank', 'noopener,noreferrer');
   };
 
   const handleViewCollection = () => {
@@ -22,7 +20,7 @@ export const Hero: React.FC<HeroProps> = ({ className = '' }) => {
   };
 
   return (
-    <section className={`${styles.hero} ${className}`}>
+    <section className={`${styles.hero} ${className}`} aria-label="Hero section">
       <div className={styles.container}>
         <Grid 
           columns={{ mobile: 1, tablet: 1, desktop: 2 }} 
@@ -42,12 +40,12 @@ export const Hero: React.FC<HeroProps> = ({ className = '' }) => {
               </Typography>
               
               <Typography 
-                variant="h3" 
+                variant="h5" 
                 color="text-primary"
                 weight="normal"
                 className={styles.subheadline}
               >
-                חייטות אישית. יוקרה בלתי מתפשרת.
+                אופנת גברים עילית. יוקרה בלתי מתפשרת.
               </Typography>
               
               <Typography 
@@ -80,7 +78,7 @@ export const Hero: React.FC<HeroProps> = ({ className = '' }) => {
 
           {/* Right Column - Image */}
           <div className={styles.imageWrapper}>
-            <div className={styles.imagePlaceholder}>
+            <div className={styles.imagePlaceholder} role="img" aria-label="חליפות יוקרה של ריבארו - ביגוד גברים פרימיום והתאמה מושלמת">
               <Typography variant="body2" color="text-secondary" align="center">
                 Hero Image
               </Typography>

@@ -22,42 +22,42 @@ export const CollectionGallery: React.FC<CollectionGalleryProps> = ({ className 
     {
       id: '1',
       title: 'חליפות חתן',
-      category: 'Groom Suits',
+      category: 'חליפת חתן יוקרתית של ריבארו - עיצוב מושלם ליום המיוחד',
       imageUrl: '/placeholder-groom.jpg',
       size: 'large',
     },
     {
       id: '2',
       title: 'Business Casual',
-      category: 'Business',
+      category: 'חליפות עסקיות אלגנטיות - סגנון מקצועי ומעודן',
       imageUrl: '/placeholder-business.jpg',
       size: 'medium',
     },
     {
       id: '3',
       title: 'טוקסידו',
-      category: 'Tuxedo',
+      category: 'טוקסידו יוקרתי של ריבארו - אלגנטיות קלאסית',
       imageUrl: '/placeholder-tuxedo.jpg',
       size: 'large',
     },
     {
       id: '4',
       title: 'אביזרים',
-      category: 'Accessories',
+      category: 'אביזרים מעוצבים לחליפה - פרטים שעושים את ההבדל',
       imageUrl: '/placeholder-accessories.jpg',
       size: 'small',
     },
     {
       id: '5',
       title: 'חליפות ערב',
-      category: 'Evening Suits',
+      category: 'חליפות ערב מעוצבות - יוקרה ואלגנטיות',
       imageUrl: '/placeholder-evening.jpg',
       size: 'medium',
     },
     {
       id: '6',
       title: 'קז׳ואל יוקרתי',
-      category: 'Luxury Casual',
+      category: 'לבוש קז׳ואל יוקרתי - נוחות ללא ויתור על סטייל',
       imageUrl: '/placeholder-casual.jpg',
       size: 'small',
     },
@@ -103,7 +103,7 @@ export const CollectionGallery: React.FC<CollectionGalleryProps> = ({ className 
   };
 
   return (
-    <section id="collection" className={`${styles.collectionGallery} ${className}`}>
+    <section id="collection" className={`${styles.collectionGallery} ${className}`} aria-label="Collection gallery">
       <div className={styles.container}>
         <Flex direction="column" gap={48} align="center">
           <Typography 
@@ -127,7 +127,7 @@ export const CollectionGallery: React.FC<CollectionGalleryProps> = ({ className 
                 }`}
               >
                 <div className={styles.imageWrapper}>
-                  <div className={styles.imagePlaceholder}>
+                  <div className={styles.imagePlaceholder} role="img" aria-label={`${item.title} - ${item.category}`}>
                     <Typography variant="body2" color="text-secondary" align="center">
                       {item.title}
                     </Typography>

@@ -1,0 +1,92 @@
+/* Privacy Policy - Rivaro */
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #F8FAFC;
+  padding: 0;
+  direction: rtl;
+}
+
+.content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.header {
+  background-color: #ffffff;
+  padding: 2rem 3rem;
+  border-bottom: 1px solid rgba(36, 59, 83, 0.08);
+  margin-bottom: 0;
+}
+
+.title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  color: #193155;
+  direction: rtl;
+  text-align: right;
+}
+
+.section {
+  padding: 2rem 3rem;
+  border-bottom: 1px solid #f0f0f0;
+  background-color: #ffffff;
+}
+
+.section:last-child {
+  border-bottom: none;
+  padding-bottom: 3rem;
+}
+
+.sectionTitle {
+  font-family: 'Assistant', 'Rubik', 'Heebo', sans-serif;
+  color: #193155;
+  direction: rtl;
+  text-align: right;
+}
+
+.text {
+  font-family: 'Assistant', 'Rubik', 'Heebo', sans-serif;
+  color: #3b3b3b;
+  direction: rtl;
+  text-align: right;
+  line-height: 1.8;
+}
+
+.list {
+  list-style: disc;
+  padding-right: 2rem;
+  margin: 1rem 0;
+}
+
+.list li {
+  margin-bottom: 0.5rem;
+}
+
+.footer {
+  font-family: 'Assistant', 'Rubik', 'Heebo', sans-serif;
+  color: #626262;
+  direction: rtl;
+  text-align: right;
+  font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header {
+    padding: 1.5rem 2rem;
+  }
+
+  .section {
+    padding: 1.5rem 2rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .list {
+    padding-right: 1.5rem;
+  }
+}

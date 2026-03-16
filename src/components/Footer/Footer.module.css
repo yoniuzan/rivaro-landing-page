@@ -2,7 +2,7 @@
 
 .footer {
   width: 100%;
-  background-color: #243b53;
+  background-color: #193155;
   color: #ffffff;
   padding: 6rem 0 2rem;
   margin-top: 4rem;
@@ -66,9 +66,17 @@
   width: fit-content;
 }
 
-.contactLink:hover,
-.socialLink:hover {
+.contactLink:hover {
   opacity: 0.7;
+}
+
+.socialLink:hover {
+  opacity: 1;
+}
+
+.socialLink:hover .socialIcon {
+  transform: scale(1.1);
+  color: #d4af37;
 }
 
 .contactText {
@@ -81,6 +89,13 @@
 .icon {
   font-size: 1.25rem;
   opacity: 0.9;
+}
+
+.socialIcon {
+  width: 24px;
+  height: 24px;
+  color: #ffffff;
+  transition: all 0.3s ease;
 }
 
 /* Socials Column */
@@ -110,11 +125,45 @@
   direction: rtl;
 }
 
-/* Copyright */
-.copyright {
+/* Legal Links */
+.legalLinks {
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   padding-top: 2rem;
   margin-top: 2rem;
+}
+
+.legalLinksRow {
+  direction: rtl;
+}
+
+.legalLink {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.legalLink:hover {
+  opacity: 0.7;
+}
+
+.legalLinkText {
+  font-family: 'Assistant', 'Rubik', 'Heebo', sans-serif;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.875rem;
+  direction: rtl;
+}
+
+.separator {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.875rem;
+}
+
+/* Copyright */
+.copyright {
+  padding-top: 1.5rem;
+  margin-top: 1.5rem;
 }
 
 .copyrightText {
