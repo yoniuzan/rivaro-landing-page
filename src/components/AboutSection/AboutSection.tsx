@@ -11,13 +11,19 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ className = '' }) =>
     <section id="about" className={`${styles.aboutSection} ${className}`} aria-label="About RIVARO">
       <div className={styles.container}>
         <div className={styles.splitLayout}>
-          {/* Left Side - Image */}
+          {/* Left Side - Video */}
           <div className={styles.imageColumn}>
-            <div className={styles.imagePlaceholder} role="img" aria-label="בוטיק ריבארו - אופנת גברים יוקרתית ומקצועית">
-              <Typography variant="body2" color="text-secondary" align="center">
-                Boutique Interior Image
-              </Typography>
-            </div>
+            <video
+              className={styles.boutiqueVideo}
+              autoPlay
+              muted
+              loop
+              playsInline
+              aria-label="בוטיק ריבארו - אופנת גברים יוקרתית ומקצועית"
+            >
+              <source src="/assets/boutique-video.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </div>
 
           {/* Right Side - Content */}

@@ -76,13 +76,20 @@ export const Hero: React.FC<HeroProps> = ({ className = '' }) => {
             </Flex>
           </Flex>
 
-          {/* Right Column - Image */}
-          <div className={styles.imageWrapper}>
-            <div className={styles.imagePlaceholder} role="img" aria-label="חליפות יוקרה של ריבארו - ביגוד גברים פרימיום והתאמה מושלמת">
-              <Typography variant="body2" color="text-secondary" align="center">
-                Hero Image
-              </Typography>
-            </div>
+          {/* Right Column - Video */}
+          <div className={styles.videoWrapper}>
+            <div className={styles.videoOverlay} />
+            <video
+              className={styles.heroVideo}
+              autoPlay
+              muted
+              loop
+              playsInline
+              aria-label="חליפות יוקרה של ריבארו - ביגוד גברים פרימיום והתאמה מושלמת"
+            >
+              <source src="/assets/hero-video.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </div>
         </Grid>
       </div>
