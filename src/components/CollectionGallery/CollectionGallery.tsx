@@ -16,6 +16,7 @@ export interface CollectionGalleryProps {
 
 export const CollectionGallery: React.FC<CollectionGalleryProps> = ({ className = '' }) => {
   const [visibleItems, setVisibleItems] = useState<Set<string>>(new Set());
+  const [autoRevealItems, setAutoRevealItems] = useState<Set<string>>(new Set());
   const itemRefs = useRef<Map<string, HTMLDivElement>>(new Map());
 
   const collectionItems: CollectionItem[] = [
@@ -94,6 +95,44 @@ export const CollectionGallery: React.FC<CollectionGalleryProps> = ({ className 
     };
   }, []);
 
+  // Auto-reveal overlay for mobile users
+  useEffect(() => {
+    const autoRevealOptions = {
+      root: null,
+      rootMargin: '-20% 0px -20% 0px',
+      threshold: 0.5,
+    };
+
+    const autoRevealCallback = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry) => {
+        const itemId = entry.target.getAttribute('data-item-id');
+        if (itemId) {
+          if (entry.isIntersecting) {
+            setAutoRevealItems((prev) => new Set(prev).add(itemId));
+          } else {
+            setAutoRevealItems((prev) => {
+              const newSet = new Set(prev);
+              newSet.delete(itemId);
+              return newSet;
+            });
+          }
+        }
+      });
+    };
+
+    const autoRevealObserver = new IntersectionObserver(autoRevealCallback, autoRevealOptions);
+
+    itemRefs.current.forEach((element) => {
+      if (element) {
+        autoRevealObserver.observe(element);
+      }
+    });
+
+    return () => {
+      autoRevealObserver.disconnect();
+    };
+  }, []);
+
   const setItemRef = (id: string) => (element: HTMLDivElement | null) => {
     if (element) {
       itemRefs.current.set(id, element);
@@ -132,7 +171,7 @@ export const CollectionGallery: React.FC<CollectionGalleryProps> = ({ className 
                     alt={`${item.title} - ${item.category}`}
                     className={styles.galleryImage}
                   />
-                  <div className={styles.overlay}>
+                  <div className={`${styles.overlay} ${autoRevealItems.has(item.id) ? styles['overlay--autoReveal'] : ''}`}>
                     <Flex direction="column" gap={8} align="center" justify="center" className={styles.overlayContent}>
                       <Typography 
                         variant="h4" 

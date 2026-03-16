@@ -48,7 +48,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s ease;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: transparent;
+}
+
+/* Active state - triggered by scroll */
+.stepNumber--active {
+  background-color: #193155;
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(25, 49, 85, 0.3);
+}
+
+.stepNumber--active .numberText {
+  color: #ffffff;
 }
 
 .step:hover .stepNumber {
@@ -59,7 +71,7 @@
 .numberText {
   font-family: 'Cormorant Garamond', Georgia, serif;
   color: #193155;
-  transition: color 0.3s ease;
+  transition: color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .step:hover .numberText {

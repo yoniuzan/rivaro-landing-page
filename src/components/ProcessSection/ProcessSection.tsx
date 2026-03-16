@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Typography, Flex } from '@components/base';
 import styles from './ProcessSection.module.css';
 
@@ -13,6 +13,9 @@ interface ProcessStep {
 }
 
 export const ProcessSection: React.FC<ProcessSectionProps> = ({ className = '' }) => {
+  const [activeStep, setActiveStep] = useState<string | null>(null);
+  const stepRefs = useRef<Map<string, HTMLDivElement>>(new Map());
+
   const steps: ProcessStep[] = [
     {
       number: '01',
@@ -35,6 +38,45 @@ export const ProcessSection: React.FC<ProcessSectionProps> = ({ className = '' }
       description: 'התאמות אחרונות עד לתוצאה המושלמת.',
     },
   ];
+
+  useEffect(() => {
+    const observerOptions = {
+      root: null,
+      rootMargin: '-40% 0px -40% 0px',
+      threshold: 0.5,
+    };
+
+    const observerCallback = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const stepNumber = entry.target.getAttribute('data-step-number');
+          if (stepNumber) {
+            setActiveStep(stepNumber);
+          }
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    stepRefs.current.forEach((element) => {
+      if (element) {
+        observer.observe(element);
+      }
+    });
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
+  const setStepRef = (number: string) => (element: HTMLDivElement | null) => {
+    if (element) {
+      stepRefs.current.set(number, element);
+    } else {
+      stepRefs.current.delete(number);
+    }
+  };
 
   return (
     <section id="process" className={`${styles.processSection} ${className}`} aria-label="Craftsmanship process">
@@ -63,9 +105,13 @@ export const ProcessSection: React.FC<ProcessSectionProps> = ({ className = '' }
           <div className={styles.stepsWrapper}>
             {steps.map((step, index) => (
               <React.Fragment key={step.number}>
-                <div className={styles.step}>
+                <div 
+                  ref={setStepRef(step.number)}
+                  data-step-number={step.number}
+                  className={styles.step}
+                >
                   <Flex direction="column" gap={16} align="center">
-                    <div className={styles.stepNumber}>
+                    <div className={`${styles.stepNumber} ${activeStep === step.number ? styles['stepNumber--active'] : ''}`}>
                       <Typography 
                         variant="h3" 
                         weight="light"
