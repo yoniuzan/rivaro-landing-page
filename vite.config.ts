@@ -36,20 +36,12 @@ export default defineConfig({
     },
   },
   build: {
-    lib: {
-      entry: path.resolve(__dirname, 'src/index.ts'),
-      name: 'ArrivalConfirmationsLandingPage',
-      formats: ['es'],
-      fileName: 'index',
-    },
+    outDir: 'dist',
+    sourcemap: false,
     rollupOptions: {
-      external: ['react', 'react-dom', 'react-redux', '@reduxjs/toolkit'],
       output: {
-        globals: {
-          react: 'React',
-          'react-dom': 'ReactDOM',
-          'react-redux': 'ReactRedux',
-          '@reduxjs/toolkit': 'RTK',
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
         },
       },
     },
