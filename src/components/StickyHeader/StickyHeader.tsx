@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Typography, Button, Flex } from '@components/base';
+import { Button, Flex } from '@components/base';
 import { CALMARK_URL } from '@constants/config';
 import styles from './StickyHeader.module.css';
 
@@ -24,17 +24,25 @@ export const StickyHeader: React.FC<StickyHeaderProps> = ({ className = '' }) =>
     window.open(CALMARK_URL, '_blank', 'noopener,noreferrer');
   };
 
+  const handleLogoClick = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <header className={`${styles.stickyHeader} ${isVisible ? styles.visible : ''} ${className}`} role="banner" aria-label="Site header">
       <div className={styles.container}>
         <Flex direction="row" justify="between" align="center" className={styles.content}>
-          <Typography 
-            variant="h5" 
-            weight="light"
-            className={styles.logo}
+          <button 
+            onClick={handleLogoClick}
+            className={styles.logoButton}
+            aria-label="Return to top"
           >
-            RIVARO
-          </Typography>
+            <img 
+              src="/assets/RIVARO-LOGO-blue.png"
+              alt="RIVARO Logo"
+              className={styles.logo}
+            />
+          </button>
 
           <Button 
             variant="primary" 

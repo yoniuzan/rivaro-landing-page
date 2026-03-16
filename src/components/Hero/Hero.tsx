@@ -30,14 +30,11 @@ export const Hero: React.FC<HeroProps> = ({ className = '' }) => {
           {/* Left Column - Content */}
           <Flex direction="column" gap={32} justify="center" className={styles.content}>
             <Flex direction="column" gap={20}>
-              <Typography 
-                variant="h1" 
-                color="text-primary"
-                weight="light"
-                className={styles.heading}
-              >
-                RIVARO
-              </Typography>
+              <img 
+                src="/assets/RIVARO-LOGO-blue.png"
+                alt="RIVARO Logo"
+                className={styles.heroLogo}
+              />
               
               <Typography 
                 variant="h5" 

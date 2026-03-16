@@ -32,6 +32,14 @@
   color: #626262;
 }
 
+.heroLogo {
+  height: 70px;
+  width: auto;
+  display: block;
+  margin: 0 auto 20px auto;
+  object-fit: contain;
+}
+
 .heading {
   font-family: 'Cormorant Garamond', Georgia, serif;
   font-weight: 300;
@@ -146,6 +154,11 @@
 
   .content {
     max-width: 100%;
+  }
+
+  .heroLogo {
+    height: 50px;
+    margin-bottom: 1rem;
   }
 
   .description {
