@@ -75,7 +75,14 @@ export const Modal: React.FC<ModalProps> = ({
             )}
           </div>
         )}
-        <div className={styles.content}>{children}</div>
+        <div className={styles.content}>
+          {children}
+          <div className={styles.footer}>
+            <button className={styles['bottom-close-button']} onClick={onClose}>
+              סגור
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );

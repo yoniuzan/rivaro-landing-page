@@ -10,7 +10,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1050;
+  z-index: 2000;
   padding: 1rem;
   animation: fadeIn 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -93,26 +93,28 @@
 
 .close-button {
   background: transparent;
-  border: none;
-  font-size: 1.5rem;
+  border: 2px solid #193155;
+  font-size: 2rem;
   line-height: 1;
   cursor: pointer;
   padding: 0;
-  width: 2.25rem;
-  height: 2.25rem;
+  width: 2.5rem;
+  height: 2.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 0.5rem;
-  color: #6b7280;
+  border-radius: 50%;
+  color: #193155;
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   flex-shrink: 0;
+  font-weight: 300;
 }
 
 .close-button:hover {
-  background-color: #f3f4f6;
-  color: #1f2937;
+  background-color: #193155;
+  color: #ffffff;
   transform: rotate(90deg);
+  border-color: #193155;
 }
 
 .close-button:active {
@@ -125,6 +127,40 @@
   flex: 1;
   scrollbar-width: thin;
   scrollbar-color: #193155 #f9fafb;
+  -webkit-overflow-scrolling: touch;
+}
+
+.footer {
+  padding: 1.5rem 2rem;
+  border-top: 1px solid #e5e7eb;
+  background-color: #fafafa;
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.bottom-close-button {
+  background-color: #193155;
+  color: #ffffff;
+  border: none;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Assistant', 'Rubik', 'Heebo', sans-serif;
+  min-width: 120px;
+}
+
+.bottom-close-button:hover {
+  background-color: #102a43;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(25, 49, 85, 0.3);
+}
+
+.bottom-close-button:active {
+  transform: translateY(0);
 }
 
 .content::-webkit-scrollbar {
@@ -158,12 +194,13 @@
 /* Responsive */
 @media (max-width: 768px) {
   .modal {
-    max-height: calc(100vh - 1rem);
+    max-height: 95vh;
     border-radius: 0.75rem;
   }
 
   .backdrop {
     padding: 0.5rem;
+    align-items: flex-end;
   }
 
   .header {
@@ -175,12 +212,24 @@
   }
   
   .close-button {
-    width: 2rem;
-    height: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.75rem;
+    border-width: 2px;
   }
 
   .content {
     padding: 1.5rem;
+  }
+
+  .footer {
+    padding: 1rem 1.5rem;
+  }
+
+  .bottom-close-button {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.125rem;
   }
   
   .modal--sm,

@@ -13,7 +13,7 @@ export const StickyHeader: React.FC<StickyHeaderProps> = ({ className = '' }) =>
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      setIsVisible(scrollPosition > 100);
+      setIsVisible(scrollPosition > 20);
     };
 
     window.addEventListener('scroll', handleScroll);

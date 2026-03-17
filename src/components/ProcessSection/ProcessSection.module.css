@@ -103,6 +103,17 @@
   margin-top: 40px;
 }
 
+/* Desktop - Permanent Midnight Navy for all circles */
+@media (min-width: 1025px) {
+  .stepNumber {
+    background-color: #193155;
+  }
+
+  .numberText {
+    color: #ffffff;
+  }
+}
+
 /* Responsive - Tablet */
 @media (max-width: 1024px) {
   .stepsWrapper {

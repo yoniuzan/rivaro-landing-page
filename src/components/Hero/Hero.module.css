@@ -2,6 +2,7 @@
 
 .hero {
   width: 100%;
+  max-width: 100%;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -83,14 +84,12 @@
 
 .videoWrapper {
   width: 100%;
-  height: 100%;
+  max-width: 635px;
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   min-height: 600px;
   overflow: hidden;
   border-radius: 2px;
+  z-index: 1;
 }
 
 .heroVideo {
@@ -98,10 +97,10 @@
   height: 100%;
   min-height: 600px;
   object-fit: cover;
-  object-position: center center;
+  object-position: center;
+  display: block;
   border-radius: 2px;
-  animation: zoomIn 1.5s ease-out forwards;
-  transform-origin: center;
+  pointer-events: none;
 }
 
 .videoOverlay {
@@ -141,11 +140,21 @@
   }
 }
 
-/* Responsive */
+/* Responsive - Mobile */
 @media (max-width: 768px) {
+  /* Force the container to NEVER exceed the phone width */
   .hero {
-    height: auto;
-    min-height: 100vh;
+    overflow: hidden !important;
+    display: block !important;
+    width: 100vw !important;
+    height: auto !important;
+    min-height: 100vh !important;
+  }
+
+  /* Neutralize the Grid/Flex framework on mobile */
+  .grid {
+    display: block !important;
+    width: 100% !important;
   }
 
   .container {
@@ -175,31 +184,28 @@
   }
 
   .videoWrapper {
-    min-height: 400px;
-    margin-top: 2rem;
+    /* The Magic Fix: Using width + margin to ensure containment */
+    width: 95% !important;
+    max-width: 95vw !important;
+    height: auto !important;
+    min-height: unset !important;
+    margin: 2rem auto !important;
+    aspect-ratio: 1 / 1;
+    overflow: hidden !important;
+    position: relative !important;
+    left: 0 !important;
+    transform: none !important;
   }
 
   .heroVideo {
-    min-height: 400px;
-    height: 100%;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: unset !important;
+    position: relative !important;
+    object-fit: cover !important;
   }
 
   .imagePlaceholder {
     height: 400px;
-  }
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-  .container {
-    padding: 3rem 2rem;
-  }
-
-  .heroVideo {
-    min-height: 500px;
-    height: 100%;
-  }
-
-  .imagePlaceholder {
-    height: 500px;
   }
 }
